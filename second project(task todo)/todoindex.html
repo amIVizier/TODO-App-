@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="todostyle.css" />
+  
+  </head>
+  <body>
+   
+
+    <!-- Login   -->
+   
+   <div class="mainpage">
+
+     <div class="textcontentuserlogin"></div>
+       <div class="userlogin">Username</div>
+       <input type="text"  class="textboxuser"><br>
+       <div  class="userpass">Password</div>
+       <input type="password" class="textboxpass"><br>
+       <button class="textboxpass" id ="buttonPass">Submit</button>
+       <button class="buttonreset" id ="buttonReset"></button>
+   </div>
+  
+
+   <!-- todoPage  hidden -->
+   <div  class="todoPage   ">
+
+    <!-- time,date and greeting now  -->
+   
+     <div class="timedategreet">
+        <div id="greetAccount"  class="greetstyle"></div>
+        <div id="clockdate" class="clockstyle">
+        </div>
+      </div>
+
+      <!-- navigation exact date of task -->
+
+   <div  class="navdateoftask">Today</div>
+     <!-- list of task -->
+     <div  class="taskcontainer">
+         
+      <div class="checkboxandtastanddatetimecontent">
+      
+         <input type="checkbox" class="checkbox">
+         <div class="task" >Put the task here</div>
+         <div class="timeoftask">21062024</div>
+
+      </div>
+
+
+     </div> 
+   </div >
+     
+   <!-- adding task  -->
+
+   <!-- btnandnewtaskcontainer hidden -->
+    <div class="btnandnewtaskcontainer   ">
+      <!-- newtaskpopup hidden -->
+            <div class="newtaskpopup ">
+           <!-- adding task time and date -->
+               <div class="containerclickaddtodoclasstexttaskdateandtime" id="containerclickaddtodoclasstexttaskdateandtimeid">
+                  <input type="checkbox" class="clickaddtodoclass" id="clickaddtodo" onclick="checkboxinputall()" ></input>
+                  <input type="text" class="texttaskdateandtime" placeholder="Create new task"></input>
+               </div>
+
+             <!-- END OF LAYER 1 -->
+                 <div class="categoryandcalendarcontainer">
+
+                         <form class="dropdownlistcontainer">
+                             <select class="dropdownlist" >
+                                <option value=""> Category</option>
+                                <option value="🏠">🏠 Home</option>
+                                <option value="🔳">🔳 Personal</option>
+                                <option value="🍕">🍕 Diet</option>
+                                <option value="📚">📚 List of Book</option>
+                                <option value="🚗">🚗 Road trip list</option>
+                             </select>
+                          </form>
+                     <div class="selectcalendar"></div>
+  
+                    </div>
+                <div class="calendarcontainer" >
+                  <!-- month,date,arrow left and right -->
+                  <div class="monthleftrightcontainer">
+                    <input type="button" class="monthleft"></input> 
+                    <div class="month" ></div> 
+                    <input type="button"class="monthright"></input>
+               </div>
+
+
+                  <!-- hidden -->
+                       <div id="calendar">   
+                       </div> 
+
+                       <!-- amtopm hidden -->
+                       <div class="amtopm hidden" id="amtopmid">
+                       </div>
+
+                       <!-- timeclass hidden -->
+
+                       <div class="timeclass hidden">
+                       </div>
+
+
+                       <button type="button" class="settime" >Set time</button>
+                       <button type="button" class="savechanges" >Save changes</button>
+
+                </div>
+      
+           </div>
+              <!-- new task modal pop up -->
+              <button class="btnnewtask" id =""><div class="newtaskpic"></div>Create new task</button>
+
+    </div>
+ 
+  
+
+  </body>
+  <script src="todoscript.js"></script>
+</html>
