@@ -364,7 +364,6 @@ allinputted.forEach( time => {
 //event if  'clickaddtodo' is check class
 //const clickaddtodo = document.getElementById('clickaddtodo') this is the variable above i just put it here for not complicated situation
 
-
 /////containerforinput in adding task
 
 function checkboxinputall(){
@@ -380,12 +379,20 @@ const date = now.getDate();
 const amtopmid = document.getElementById('amtopmid');
 const timebeginningoftask = document.querySelector('.timebeginningoftask');
 const timeendoftask  = document.querySelector('.timeendoftask');
+const taskcontainer = document.querySelector('.taskcontainer')
 
 
 if(clickAddTodo.checked === true ){
+
+
+  const html =` <div class="checkboxandtastanddatetimecontent">
+      
+                      <input type="checkbox" class="checkbox">
+                      <div class="task" >${task.textContent = addcategory.value}</div>
+                      <div class="timeoftask">${timeoftask.textContent = timeinputted.textContent}</div>
+                </div>`
+
   console.log('checkbox is check');
-  task.textContent = addcategory.value ;
-  timeoftask.textContent = timeinputted.textContent;
   newtaskpopup.classList.add('hidden') ;
   //stop propogation means after click it wont call the other loaded function
   event.stopPropagation();
@@ -400,6 +407,10 @@ if(clickAddTodo.checked === true ){
   inputcount = 0;
   amtopm.classList.add('hidden');
   timeclass.classList.add('hidden');
+
+
+
+  taskcontainer.insertAdjacentHTML('afterbegin',html)
 
 }
 }
